@@ -637,8 +637,8 @@ $(document).ready(function(){
   <form id="hostel_form" class="wow fadeInUp" method="post" action="{% url 'advt_form' %}" enctype="multipart/form-data">
     {% csrf_token %}
         <center><h1>Hostels</h1></center><hr><br>
-<!-- Hidden latitude, longitude and description values 
-<!-- <input type="hidden" id="name_hostel" value="Hostels" name="property_type">
+ Hidden latitude, longitude and description values 
+ <input type="hidden" id="name_hostel" value="Hostels" name="property_type">
 <input type="hidden" id="latitude2" value="" name="latitude">
 <input type="hidden" id="longitude2" value="" name="longitude">
 <input type="hidden" id="address2" value="" name="address">
@@ -652,7 +652,7 @@ $(document).ready(function(){
 
                     <input type="text" class="form-control" id="number" placeholder="Enter the specific area of your room" name="apartment" style="border-top-right-radius: 25px;border-bottom-right-radius: 25px;" required>
                 </div></div>
-                <div class="col-lg-4">
+<!--                <div class="col-lg-4">
                     <label for="f_number" class="decorator">&nbsp Floor No. :</label><br>
 					<div class="input-group input-group-lg" style="margin-top:8px">
 					<span class="input-group-addon" >
@@ -868,7 +868,7 @@ $(document).ready(function(){
       </div>
 
       <button type="submit" class="btn btn-default">Submit</button>
--->
+
 <!--       <br><br>
       <center><button type="submit" class="btn btn-danger" style="height:65px;width:150px;font-size:25px;border-radius:45px;"><span>Submit</span></button></center>
       </form>
