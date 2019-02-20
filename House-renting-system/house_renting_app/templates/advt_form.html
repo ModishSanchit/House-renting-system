@@ -150,16 +150,16 @@ $(document).ready(function(){
                 var input = document.getElementById('searchtextfield');
                 var autocomplete = new google.maps.places.Autocomplete(input);
 
-//                google.maps.event.addListener(autocomplete, 'place_changed', function () {
-//
-//
-//                    var place = autocomplete.getPlace();
-//                    var pname = place.name;
-//
-//                    var plat = place.geometry.location.lat();
-//                    var plng = place.geometry.location.lng();
-//                    alert(place);
-//                    alert("For *"+pname+"* Latitude is: *"+plat+"* and Longitude is: *"+plng+"*");
+                google.maps.event.addListener(autocomplete, 'place_changed', function () {
+
+
+                    var place = autocomplete.getPlace();
+                    var pname = place.name;
+
+                    var plat = place.geometry.location.lat();
+                    var plng = place.geometry.location.lng();
+                    alert(place);
+                    alert("For *"+pname+"* Latitude is: *"+plat+"* and Longitude is: *"+plng+"*");
 //          					document.getElementById("latitude1").value=plat;
 //                    document.getElementById("latitude2").value=plat;
 //                    document.getElementById("latitude3").value=plat;
@@ -173,7 +173,7 @@ $(document).ready(function(){
 //                    $('#myModal').modal('show');
 //
 //
-//                });
+                });
             }
         </script>
 
