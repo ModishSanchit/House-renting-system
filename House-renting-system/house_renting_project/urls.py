@@ -23,7 +23,7 @@ from house_renting_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
-#    path('index',views.index,name="index"),
+    path('index',views.index,name="index"),
 #    path('advt_form/',views.advt_form,name="advt_form"),
 #    path('register/',views.register,name="register"),
 #    path('user_login/',views.user_login,name="user_login"),
