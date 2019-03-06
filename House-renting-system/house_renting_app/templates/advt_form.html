@@ -15,7 +15,7 @@
        <!--Wow JS-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <style>
+<!-- <style>
 .navbar-brand{
 animation-iteration-count:infinite;}
 
@@ -106,9 +106,9 @@ nav {
 
 		<style>
 
-  article, aside, figure, footer, header, hgroup,
+ <!-- article, aside, figure, footer, header, hgroup,
   menu, nav, section { display: block; }
-	
+	-->
 	.image-upload
 {
     display: block;
@@ -160,25 +160,25 @@ $(document).ready(function(){
                     var plng = place.geometry.location.lng();
                     alert(place);
                     alert("For *"+pname+"* Latitude is: *"+plat+"* and Longitude is: *"+plng+"*");
-//          					document.getElementById("latitude1").value=plat;
-//                    document.getElementById("latitude2").value=plat;
-//                    document.getElementById("latitude3").value=plat;
-//                    document.getElementById("longitude1").value=plng;
-//                    document.getElementById("longitude2").value=plng;
-//                    document.getElementById("longitude3").value=plng;
-//                    document.getElementById("address1").value=place;
-//                    document.getElementById("address2").value=place;
-//                    document.getElementById("address3").value=place;
-//          					initMap(pname,plat,plng);
-//                    $('#myModal').modal('show');
-//
-//
+          					document.getElementById("latitude1").value=plat;
+                    document.getElementById("latitude2").value=plat;
+                    document.getElementById("latitude3").value=plat;
+                    document.getElementById("longitude1").value=plng;
+                    document.getElementById("longitude2").value=plng;
+                    document.getElementById("longitude3").value=plng;
+                    document.getElementById("address1").value=place;
+                    document.getElementById("address2").value=place;
+                    document.getElementById("address3").value=place;
+          					initMap(pname,plat,plng);
+                    $('#myModal').modal('show');
+
+
                 });
             }
         </script>
 
         <!-- Script for drag and drop feature on map-->
-<!--
+
         <script>
             var np;
             function initMap(pname,plat,plng) {
@@ -224,7 +224,7 @@ $(document).ready(function(){
             }
         </script>
 
--->
+
 
 
 
@@ -612,6 +612,7 @@ $(document).ready(function(){
 
 
 
+<!--
       <div class="form-group">
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
@@ -621,24 +622,26 @@ $(document).ready(function(){
       </div>
 
       <button type="submit" class="btn btn-default">Submit</button>
- <br><br>
+-->
+         <br><br>
         <center><button type="submit" class="btn btn-danger" style="height:65px;width:150px;font-size:25px;border-radius:45px"><span>Submit</span></button></center>
       </form>
       </div>
-  </div> 
+  </div>
+
 
 
         <!--    Form 2 -->
 
-
+<!--
 
       <div class="container wow fadeIn">
        <div class=" form-group ">
   <form id="hostel_form" class="wow fadeInUp" method="post" action="{% url 'advt_form' %}" enctype="multipart/form-data">
     {% csrf_token %}
         <center><h1>Hostels</h1></center><hr><br>
- Hidden latitude, longitude and description values 
- <input type="hidden" id="name_hostel" value="Hostels" name="property_type">
+<!-- Hidden latitude, longitude and description values -->
+<input type="hidden" id="name_hostel" value="Hostels" name="property_type">
 <input type="hidden" id="latitude2" value="" name="latitude">
 <input type="hidden" id="longitude2" value="" name="longitude">
 <input type="hidden" id="address2" value="" name="address">
@@ -650,11 +653,9 @@ $(document).ready(function(){
 					<i class="fa fa-square"></i>
 				</span>
 
-<!--
                     <input type="text" class="form-control" id="number" placeholder="Enter the specific area of your room" name="apartment" style="border-top-right-radius: 25px;border-bottom-right-radius: 25px;" required>
                 </div></div>
--->
-<!--                <div class="col-lg-4">
+                <div class="col-lg-4">
                     <label for="f_number" class="decorator">&nbsp Floor No. :</label><br>
 					<div class="input-group input-group-lg" style="margin-top:8px">
 					<span class="input-group-addon" >
@@ -870,38 +871,36 @@ $(document).ready(function(){
       </div>
 
       <button type="submit" class="btn btn-default">Submit</button>
-
-<!--       <br><br>
+-->
+       <br><br>
       <center><button type="submit" class="btn btn-danger" style="height:65px;width:150px;font-size:25px;border-radius:45px;"><span>Submit</span></button></center>
       </form>
 	  </div>
 	  </div>
 
--->
+
 
 
 
                             <!--    Form 3 -->
 
-<!--
+
 <div class="container wow fadeIn">
     <div class="form-group ">
     <form method="post" action="{% url 'advt_form' %}" enctype="multipart/form-data" id="house_form">
       {% csrf_token %}
         <center><h1>Houses</h1></center><hr>
--->
 
 <!-- Hidden latitude, longitude and description values -->
-<!--
 <input type="hidden" id="name_house" value="Houses" name="property_type">
 <input type="hidden" id="latitude3" placeholder="latitude" value="" name="latitude">
 <input type="hidden" id="longitude3" placeholder="longitude" value="" name="longitude">
 <input type="hidden" id="address3" value="" name="address">
 
 
--->
 
-            <!-- <div class="row">
+
+            <div class="row">
                 <div class="col-lg-4">
                     <label for="number" class="decorator">&nbsp No of Bedrooms :</label>
 					<div class="input-group input-group-lg" style="margin-top:8px">
@@ -1122,7 +1121,7 @@ $(document).ready(function(){
     </div>
           </div>
 
- -->
+
 
 
 
@@ -1140,14 +1139,14 @@ $(document).ready(function(){
 
       <button type="submit" class="btn btn-default">Submit</button>
 -->
-    <!--      <br><br>
+          <br><br>
         <center><button type="submit" class="btn btn-danger" style="height:65px;width:150px;font-size:25px;border-radius:45px;"><span>Submit</span></button></center>
       </form>
   </div>
   </div> -->
 
 
- -->
+
 
 
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv1tJmX-EeixYFP9LTQMnR1IjUtLYa6Yk&libraries=places&callback=activatePlacesSearch"></script>
