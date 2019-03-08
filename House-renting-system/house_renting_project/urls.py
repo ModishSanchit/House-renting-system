@@ -28,7 +28,7 @@ urlpatterns = [
     path('register/',views.register,name="register"),
     path('user_login/',views.user_login,name="user_login"),
     path('logout/',views.user_logout,name="logout"),
-    path('show_apartment/',views.show_apartment,)#name="show_apartment"),
+    path('show_apartment/',views.show_apartment,name="show_apartment"),
 #    path('rating_analysis',views.rating_analysis,name="rating_analysis"),
 
 ]#+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
