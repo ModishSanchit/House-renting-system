@@ -12,20 +12,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.gis.measure import Distance,D
 
 
-# Create your views here.
-def index(request):
-    if request.method=="POST":
-        search_lat=request.POST.get('latitude')
-        search_long=request.POST.get('longitude')
-        placename=request.POST.get('placename')
-        #SRID=4326;POINT (81.84631100000001 25.4358011)
-        #search_long=-0.004119873046875001
-        #search_lat=0.01270294179045549
-        point=fromstr("POINT(%s %s)" %(search_long,search_lat),srid=4326)
-        print(point)
-        property_type=request.POST.get('property_type')
-        print(property_type)
-        	#SRID=4326;POINT (-0.004119873046875001 0.01270294179045549)
+
 
         if property_type=="Apartment":
             apartment_range = request.POST.get('property_range')
