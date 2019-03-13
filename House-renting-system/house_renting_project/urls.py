@@ -31,4 +31,4 @@ urlpatterns = [
     path('show_apartment/',views.show_apartment,name="show_apartment"),
     path('rating_analysis',views.rating_analysis,name="rating_analysis"),
 
-]+static(settings.MEDIA_URL#, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
