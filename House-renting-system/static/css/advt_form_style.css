@@ -24,8 +24,8 @@ select:focus {
     */
     /* do not include above code */
      .btn {
-   border-radius: /*4px*/;
-   background-color: /*#f4511e*/;
+   border-radius: 4px;
+   background-color: f4511e;
    color: #FFFFFF;
    text-align: center;
    font-size: 28px;
