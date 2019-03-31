@@ -1,32 +1,5 @@
 
 
-def show_apartment(request):
-    p_type=request.POST.get('p_type')
-    property_id=request.POST.get('property_id')
-
-    if not request.user.is_authenticated:
-        return render(request,'modals.html',{'p_type':p_type,'property_id':property_id})  # or http response
-    else:
-        if(request.method=="POST"):
-            # p_type=request.POST.get('p_type')
-            # property_id=request.POST.get('property_id')
-            print("Hello",p_type,property_id)
-            if p_type == "Apartment":
-                show=Apartment.objects.get(id=property_id)
-                return render(request,'show_apartment.html',{ 'show':show ,'p_type':p_type ,'property_id':property_id })
-            if p_type == "Hostels":
-                show=Hostels.objects.get(id=property_id)
-                return render(request,'show_hostel.html',{'show':show ,'p_type':p_type ,'property_id':property_id})
-            if p_type == "Houses":
-                show=Houses.objects.get(id=property_id)
-                print("Going to Houses")
-                return render(request,'show_house.html',{'show':show ,'p_type':p_type ,'property_id':property_id})
-            #print("Show",show)
-
-            #return HttpResponse("Error")
-
-
-
 def advt_form(request):
     if request.method=="POST":
 
