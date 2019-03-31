@@ -1,22 +1,4 @@
 
-        if property_type=="Apartment":
-            apartment_range = request.POST.get('property_range')
-            results=Apartment.objects.filter(location__distance_lt=(point,D(km=apartment_range))).order_by('-rating')
-
-        if property_type=="Hostels":
-            apartment_range = request.POST.get('property_range')
-            results=Hostels.objects.filter(location__distance_lt=(point,D(km=apartment_range))).order_by('-rating')
-
-        if property_type=="Houses":
-            apartment_range = request.POST.get('property_range')
-            results=Houses.objects.filter(location__distance_lt=(point,D(km=apartment_range))).order_by('-rating')
-
-        return render(request,'search_results.html',{'results':results,'placename':placename,'property_type':property_type})
-
-
-    return render(request,'index.html')
-
-
 
 
 
