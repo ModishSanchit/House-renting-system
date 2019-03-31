@@ -1,8 +1,21 @@
 
+        if property_type=="Apartment":
+            apartment_range = request.POST.get('property_range')
+            results=Apartment.objects.filter(location__distance_lt=(point,D(km=apartment_range))).order_by('-rating')
+
+        if property_type=="Hostels":
+            apartment_range = request.POST.get('property_range')
+            results=Hostels.objects.filter(location__distance_lt=(point,D(km=apartment_range))).order_by('-rating')
+
+        if property_type=="Houses":
+            apartment_range = request.POST.get('property_range')
+            results=Houses.objects.filter(location__distance_lt=(point,D(km=apartment_range))).order_by('-rating')
+
+        return render(request,'search_results.html',{'results':results,'placename':placename,'property_type':property_type})
 
 
-
-            apartment_name=request.POST.get("apartment_name")
+    return render(request,'index.html')
+	    apartment_name=request.POST.get("apartment_name")
             apartment_type=request.POST.get("apartment_type")
             super_buildup_area=request.POST.get("super_buildup_area")
             apartment_carpet_area=request.POST.get("apartment_carpet_area")
