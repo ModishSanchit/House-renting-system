@@ -1,15 +1,9 @@
 
 
-def advt_form(request):
-    if request.method=="POST":
 
-        property_type=request.POST.get("property_type")
 
-        if(property_type == 'Apartment'):
 
-            latitude=request.POST.get("latitude")
-            longitude=request.POST.get("longitude")
-            address=request.POST.get("address")
+
             apartment_name=request.POST.get("apartment_name")
             apartment_type=request.POST.get("apartment_type")
             super_buildup_area=request.POST.get("super_buildup_area")
