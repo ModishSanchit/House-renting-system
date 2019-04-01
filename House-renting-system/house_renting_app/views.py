@@ -1,18 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.shortcuts import render
-from django.http import HttpResponseRedirect,HttpResponse
-from django.contrib.gis.geos import fromstr
-from .models import Apartment,Houses,Hostels,UserProfileInfo
-from house_renting_app.forms import UserForm
-from django.contrib.auth import authenticate,login,logout
-from django.urls import reverse
-from django.contrib.auth.decorators import login_required
-from django.contrib.gis.measure import Distance,D
-
-
-
 
         if property_type=="Apartment":
             apartment_range = request.POST.get('property_range')
@@ -30,48 +15,7 @@ from django.contrib.gis.measure import Distance,D
 
 
     return render(request,'index.html')
-
-
-
-
-def show_apartment(request):
-    p_type=request.POST.get('p_type')
-    property_id=request.POST.get('property_id')
-
-    if not request.user.is_authenticated:
-        return render(request,'modals.html',{'p_type':p_type,'property_id':property_id})  # or http response
-    else:
-        if(request.method=="POST"):
-            # p_type=request.POST.get('p_type')
-            # property_id=request.POST.get('property_id')
-            print("Hello",p_type,property_id)
-            if p_type == "Apartment":
-                show=Apartment.objects.get(id=property_id)
-                return render(request,'show_apartment.html',{ 'show':show ,'p_type':p_type ,'property_id':property_id })
-            if p_type == "Hostels":
-                show=Hostels.objects.get(id=property_id)
-                return render(request,'show_hostel.html',{'show':show ,'p_type':p_type ,'property_id':property_id})
-            if p_type == "Houses":
-                show=Houses.objects.get(id=property_id)
-                print("Going to Houses")
-                return render(request,'show_house.html',{'show':show ,'p_type':p_type ,'property_id':property_id})
-            #print("Show",show)
-
-            #return HttpResponse("Error")
-
-
-
-def advt_form(request):
-    if request.method=="POST":
-
-        property_type=request.POST.get("property_type")
-
-        if(property_type == 'Apartment'):
-
-            latitude=request.POST.get("latitude")
-            longitude=request.POST.get("longitude")
-            address=request.POST.get("address")
-            apartment_name=request.POST.get("apartment_name")
+	    apartment_name=request.POST.get("apartment_name")
             apartment_type=request.POST.get("apartment_type")
             super_buildup_area=request.POST.get("super_buildup_area")
             apartment_carpet_area=request.POST.get("apartment_carpet_area")
