@@ -40,7 +40,7 @@ select:focus {
    position: relative;
    transition: 0.5s;
    }
-/*
+
    .btn span:after {
    content: '\00bb';
    position: absolute;
@@ -49,7 +49,7 @@ select:focus {
    right: -20px;
    transition: 0.5s;
    }
-
+/*
    .btn:hover span {
    padding-right: 25px;
    }
