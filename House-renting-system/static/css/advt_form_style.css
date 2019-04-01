@@ -34,13 +34,13 @@ select:focus {
    margin: 5px;
    }
 
- /*  .btn span {
+   .btn span {
    cursor: pointer;
    display: inline-block;
    position: relative;
    transition: 0.5s;
    }
-
+/*
    .btn span:after {
    content: '\00bb';
    position: absolute;
